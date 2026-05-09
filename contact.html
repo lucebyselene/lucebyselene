@@ -3,146 +3,330 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contactează Luce by Selene — comenzi, întrebări, colaborări.">
-  <title>Contact — Luce by Selene</title>
+  <title>Contact și Comandă — Luce by Selene</title>
+  <meta name="description" content="Comandă lumânări artizanale prin WhatsApp sau completează formularul de contact. Răspundem în maximum 2 ore, Luni-Sâmbătă.">
+  <link rel="canonical" href="https://lucebyselene.ro/contact.html">
+  <meta property="og:title" content="Contact și Comandă — Luce by Selene">
+  <meta property="og:description" content="Comandă lumânări artizanale prin WhatsApp sau completează formularul de contact. Răspundem în maximum 2 ore.">
+  <meta property="og:image" content="https://lucebyselene.ro/og-image.jpg">
+  <meta property="og:url" content="https://lucebyselene.ro/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ro_RO">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/contact.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: '#F5F1EB',
+          'cream-dark': '#E8E2D9',
+          text: '#1C1612',
+          'text-light': '#6B5647',
+          accent: '#C9A84C',
+          'accent-hover': '#B8862E',
+          brown: '#6B3A2A',
+          sage: '#7A8B6F',
+          'sage-light': '#E8EDE5',
+          border: '#E5D9CE',
+        },
+        fontFamily: {
+          display: ['Cormorant Garamond', 'serif'],
+          body: ['DM Sans', 'sans-serif'],
+        },
+      },
+    },
+  }
+  </script>
+  <style type="text/tailwindcss">
+    @layer base {
+      body { font-family: 'DM Sans', sans-serif; font-size: 17px; line-height: 1.7; color: #1C1612; background-color: #F5F1EB; }
+      h1, h2, h3, h4, h5, h6 { font-family: 'Cormorant Garamond', serif; }
+    }
+    @layer utilities {
+      .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+      .reveal.visible { opacity: 1; transform: translateY(0); }
+      .nav-link::after { content: ''; display: block; width: 0; height: 2px; background: #C9A84C; transition: width 0.3s ease; }
+      .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+      @keyframes pulse-wa { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); } 70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); } 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); } }
+      .wa-pulse { animation: pulse-wa 2s infinite; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .wa-pulse { animation: none; }
+    }
+  </style>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="REPLACE_ME"></script>
 </head>
-<body>
+<body class="bg-cream text-text">
 
-  <!-- Header -->
-  <header class="site-header">
-    <nav class="nav-wrapper">
-      <a href="index.html" class="logo">Luce <span>by Selene</span></a>
-      <button class="nav-toggle" aria-label="Meniu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links">
-        <li><a href="index.html">Acasă</a></li>
-        <li><a href="produse.html">Produse</a></li>
-        <li><a href="povestea.html">Povestea</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+  <!-- Navigation -->
+  <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-border z-50">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 sm:h-20">
+      <a href="/" class="font-display text-2xl sm:text-3xl font-bold">
+        <span class="text-accent">Luce</span> <span class="text-text">by Selene</span>
+      </a>
+      <ul class="hidden md:flex items-center gap-8 font-body text-[15px]">
+        <li><a href="/" class="nav-link py-1">Acasă</a></li>
+        <li><a href="/produse.html" class="nav-link py-1">Produse</a></li>
+        <li><a href="/povestea.html" class="nav-link py-1">Povestea</a></li>
+        <li><a href="/faq.html" class="nav-link py-1">FAQ</a></li>
+        <li><a href="/contact.html" class="nav-link active py-1">Contact</a></li>
       </ul>
+      <button id="menuBtn" class="md:hidden p-3 -mr-3" aria-label="Meniu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path id="menuIcon" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
     </nav>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-border bg-white">
+      <ul class="flex flex-col py-4 px-6 gap-1 font-body">
+        <li><a href="/" class="block py-3 px-3 hover:bg-cream rounded-lg">Acasă</a></li>
+        <li><a href="/produse.html" class="block py-3 px-3 hover:bg-cream rounded-lg">Produse</a></li>
+        <li><a href="/povestea.html" class="block py-3 px-3 hover:bg-cream rounded-lg">Povestea</a></li>
+        <li><a href="/faq.html" class="block py-3 px-3 hover:bg-cream rounded-lg">FAQ</a></li>
+        <li><a href="/contact.html" class="block py-3 px-3 text-accent font-medium rounded-lg">Contact</a></li>
+      </ul>
+    </div>
   </header>
 
   <!-- Page Header -->
-  <section class="page-header">
-    <div class="container">
-      <h1>Contactează-ne</h1>
-      <p>Vrei să comanzi, ai o întrebare sau vrei un produs personalizat? Scrie-ne.</p>
+  <section class="pt-28 sm:pt-36 pb-16 sm:pb-20 text-center">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-bold mb-6 reveal">Contact și Comandă</h1>
+      <p class="text-text-light text-lg max-w-2xl mx-auto reveal">Cel mai rapid mod de a comanda e prin WhatsApp — scrie-ne și îți răspundem imediat. Dacă preferi, folosește formularul de mai jos.</p>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section class="contact-section">
-    <div class="container">
-      <div class="contact-grid">
+  <!-- Contact Grid -->
+  <section class="pb-20 sm:pb-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
 
         <!-- Form -->
-        <div class="contact-form-wrapper">
-          <h2>Trimite un mesaj</h2>
-          <form action="https://formspree.io/f/REPLACE_ME" method="POST" class="contact-form">
-            <div class="form-group">
-              <label for="name">Numele tău</label>
-              <input type="text" id="name" name="name" required>
+        <div class="reveal">
+          <h2 class="font-display text-2xl sm:text-3xl font-bold mb-6">Trimite-ne un mesaj</h2>
+          <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+            <input type="hidden" name="access_key" value="REPLACE_WITH_WEB3FORMS_KEY">
+            <input type="hidden" name="subject" value="Mesaj nou de pe lucebyselene.ro">
+            <input type="hidden" name="redirect" value="https://lucebyselene.ro/contact.html">
+            <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+
+            <div>
+              <label for="name" class="block text-sm font-medium mb-2">Numele tău</label>
+              <input type="text" name="name" id="name" required class="w-full px-4 py-3 rounded-xl border border-border bg-white focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors">
             </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required>
+
+            <div>
+              <label for="email" class="block text-sm font-medium mb-2">Email</label>
+              <input type="email" name="email" id="email" required class="w-full px-4 py-3 rounded-xl border border-border bg-white focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors">
             </div>
-            <div class="form-group">
-              <label for="subject">Subiect</label>
-              <select id="subject" name="subject">
-                <option value="comanda">Vreau să comand</option>
-                <option value="intrebare">Am o întrebare</option>
-                <option value="personalizat">Produs personalizat</option>
-                <option value="colaborare">Colaborare</option>
-                <option value="altele">Altele</option>
+
+            <div>
+              <label for="subject" class="block text-sm font-medium mb-2">Subiect</label>
+              <select name="subject" id="subject" required class="w-full px-4 py-3 rounded-xl border border-border bg-white focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors">
+                <option value="" disabled selected>Alege un subiect</option>
+                <option value="Vreau să comand">Vreau să comand</option>
+                <option value="Am o întrebare">Am o întrebare</option>
+                <option value="Produs personalizat">Produs personalizat</option>
+                <option value="Colaborare">Colaborare</option>
+                <option value="Altele">Altele</option>
               </select>
             </div>
-            <div class="form-group">
-              <label for="message">Mesajul tău</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
+
+            <div>
+              <label for="message" class="block text-sm font-medium mb-2">Mesajul tău</label>
+              <textarea name="message" id="message" rows="5" required class="w-full px-4 py-3 rounded-xl border border-border bg-white focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors resize-y"></textarea>
             </div>
-            <button type="submit" class="btn">Trimite mesajul</button>
+
+            <button type="submit" class="w-full sm:w-auto bg-accent text-white font-medium px-8 py-4 rounded-full hover:bg-accent-hover hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 text-lg">
+              Trimite mesajul
+            </button>
           </form>
         </div>
 
-        <!-- Info -->
-        <div class="contact-info">
-          <h2>Sau scrie-ne direct</h2>
+        <!-- Contact Info -->
+        <div class="space-y-6 reveal">
+          <h2 class="font-display text-2xl sm:text-3xl font-bold mb-6">Sau contactează-ne direct</h2>
 
-          <div class="info-card">
-            <h3>Email</h3>
-            <a href="mailto:contact@lucebyselene.ro">contact@lucebyselene.ro</a>
-          </div>
+          <!-- WhatsApp Card -->
+          <a href="https://wa.me/40XXXXXXXXX?text=Bun%C4%83!%20Vreau%20s%C4%83%20comand%20de%20la%20Luce%20by%20Selene." class="block bg-white rounded-2xl border border-border p-6 hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-[#25D366]/10 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </div>
+              <div>
+                <h3 class="font-display text-lg font-semibold">WhatsApp</h3>
+                <p class="text-text-light text-[15px]">Cel mai rapid mod de a comanda</p>
+              </div>
+            </div>
+          </a>
 
-          <div class="info-card">
-            <h3>Instagram</h3>
-            <a href="https://instagram.com/lucebyselene" target="_blank" rel="noopener">@lucebyselene</a>
-          </div>
+          <!-- Email Card -->
+          <a href="mailto:contact@lucebyselene.ro" class="block bg-white rounded-2xl border border-border p-6 hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg>
+              </div>
+              <div>
+                <h3 class="font-display text-lg font-semibold">Email</h3>
+                <p class="text-text-light text-[15px]">contact@lucebyselene.ro</p>
+              </div>
+            </div>
+          </a>
 
-          <div class="info-card">
-            <h3>Facebook</h3>
-            <a href="https://facebook.com/lucebyselene" target="_blank" rel="noopener">Luce by Selene</a>
-          </div>
+          <!-- Instagram Card -->
+          <a href="https://www.instagram.com/lucebyselene" target="_blank" rel="noopener" class="block bg-white rounded-2xl border border-border p-6 hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-[#E1306C]/10 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-[#E1306C]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </div>
+              <div>
+                <h3 class="font-display text-lg font-semibold">Instagram</h3>
+                <p class="text-text-light text-[15px]">@lucebyselene</p>
+              </div>
+            </div>
+          </a>
 
-          <div class="info-card">
-            <h3>Comenzi</h3>
-            <p>Acceptăm comenzi prin mesaj direct pe Instagram, Facebook, email sau prin formularul de pe această pagină.</p>
-          </div>
+          <!-- Facebook Card -->
+          <a href="https://www.facebook.com/LuceBySelene" target="_blank" rel="noopener" class="block bg-white rounded-2xl border border-border p-6 hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-[#1877F2]/10 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-[#1877F2]" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </div>
+              <div>
+                <h3 class="font-display text-lg font-semibold">Facebook</h3>
+                <p class="text-text-light text-[15px]">Luce by Selene</p>
+              </div>
+            </div>
+          </a>
 
-          <div class="info-card">
-            <h3>Timp de răspuns</h3>
-            <p>Răspundem de obicei în 24 de ore. Pentru comenzi personalizate, termenul de execuție variază.</p>
+          <!-- Response time -->
+          <div class="bg-sage-light rounded-2xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-full bg-sage/20 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-sage" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
+              </div>
+              <div>
+                <h3 class="font-display text-lg font-semibold">Timp de răspuns</h3>
+                <p class="text-text-light text-[15px]">Răspundem în maximum 2 ore, Luni-Sâmbătă</p>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Order Flow -->
+  <section class="py-20 sm:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Cum funcționează comanda</h2>
+        <p class="text-text-light max-w-xl mx-auto">Patru pași simpli, de la mesaj la livrare.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center reveal">
+          <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-accent/10 flex items-center justify-center">
+            <span class="font-display text-2xl font-bold text-accent">1</span>
+          </div>
+          <h3 class="font-display text-xl font-semibold mb-2">Mesaj</h3>
+          <p class="text-text-light text-[15px]">Ne scrii pe WhatsApp, Instagram sau prin formularul de contact cu ce dorești să comanzi.</p>
+        </div>
+        <div class="text-center reveal">
+          <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-accent/10 flex items-center justify-center">
+            <span class="font-display text-2xl font-bold text-accent">2</span>
+          </div>
+          <h3 class="font-display text-xl font-semibold mb-2">Confirmare</h3>
+          <p class="text-text-light text-[15px]">Îți confirmăm disponibilitatea, prețul și termenul de livrare. Stabilim împreună detaliile.</p>
+        </div>
+        <div class="text-center reveal">
+          <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-accent/10 flex items-center justify-center">
+            <span class="font-display text-2xl font-bold text-accent">3</span>
+          </div>
+          <h3 class="font-display text-xl font-semibold mb-2">Plată</h3>
+          <p class="text-text-light text-[15px]">Transfer bancar sau ramburs la curier. Primești confirmare de plată și începem pregătirea comenzii.</p>
+        </div>
+        <div class="text-center reveal">
+          <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-accent/10 flex items-center justify-center">
+            <span class="font-display text-2xl font-bold text-accent">4</span>
+          </div>
+          <h3 class="font-display text-xl font-semibold mb-2">Livrare</h3>
+          <p class="text-text-light text-[15px]">Ambalăm cu grijă și trimitem prin curier. Primești AWB și poți urmări coletul în timp real.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="logo">Luce <span>by Selene</span></div>
-          <p>Lumânări naturale handmade, create cu grijă în România.</p>
+  <footer class="bg-text py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+        <div>
+          <a href="/" class="font-display text-2xl font-bold"><span class="text-accent">Luce</span> <span class="text-white">by Selene</span></a>
+          <p class="text-white/60 mt-4 text-[15px]">Lumânări artizanale din ceară naturală, făcute cu drag în România. Fiecare piesă poartă căldura mâinilor care au creat-o.</p>
         </div>
         <div>
-          <h4>Navigare</h4>
-          <ul class="footer-links">
-            <li><a href="index.html">Acasă</a></li>
-            <li><a href="produse.html">Produse</a></li>
-            <li><a href="povestea.html">Povestea</a></li>
-            <li><a href="contact.html">Contact</a></li>
+          <h4 class="font-display text-lg font-semibold text-white mb-4">Navigare</h4>
+          <ul class="space-y-2 text-[15px]">
+            <li><a href="/" class="text-white/60 hover:text-accent transition-colors">Acasă</a></li>
+            <li><a href="/produse.html" class="text-white/60 hover:text-accent transition-colors">Produse</a></li>
+            <li><a href="/povestea.html" class="text-white/60 hover:text-accent transition-colors">Povestea noastră</a></li>
+            <li><a href="/faq.html" class="text-white/60 hover:text-accent transition-colors">Întrebări frecvente</a></li>
+            <li><a href="/contact.html" class="text-white/60 hover:text-accent transition-colors">Contact</a></li>
           </ul>
         </div>
         <div>
-          <h4>Contact</h4>
-          <ul class="footer-links">
-            <li><a href="mailto:contact@lucebyselene.ro">contact@lucebyselene.ro</a></li>
-            <li><a href="https://instagram.com/lucebyselene" target="_blank" rel="noopener">Instagram</a></li>
-            <li><a href="https://facebook.com/lucebyselene" target="_blank" rel="noopener">Facebook</a></li>
+          <h4 class="font-display text-lg font-semibold text-white mb-4">Contact</h4>
+          <ul class="space-y-2 text-[15px]">
+            <li><a href="mailto:contact@lucebyselene.ro" class="text-white/60 hover:text-accent transition-colors">contact@lucebyselene.ro</a></li>
+            <li><a href="https://wa.me/40XXXXXXXXX" class="text-white/60 hover:text-accent transition-colors">WhatsApp</a></li>
           </ul>
+          <div class="flex items-center gap-4 mt-6">
+            <a href="https://www.instagram.com/lucebyselene" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors" aria-label="Instagram">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/LuceBySelene" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors" aria-label="Facebook">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://wa.me/40XXXXXXXXX?text=Bun%C4%83!%20Vreau%20s%C4%83%20comand%20de%20la%20Luce%20by%20Selene." target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors" aria-label="WhatsApp">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        &copy; 2026 Luce by Selene. Toate drepturile rezervate.
+      <div class="border-t border-white/10 mt-12 pt-8 text-center">
+        <p class="text-white/40 text-sm">&copy; 2026 Luce by Selene. Toate drepturile rezervate.</p>
       </div>
     </div>
   </footer>
 
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/40XXXXXXXXX?text=Bun%C4%83!%20Vreau%20s%C4%83%20comand%20de%20la%20Luce%20by%20Selene." target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-[9999] w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 wa-pulse" aria-label="WhatsApp">
+    <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
   <script>
-    document.querySelector('.nav-toggle').addEventListener('click', function() {
-      document.querySelector('.nav-links').classList.toggle('open');
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    menuBtn.addEventListener('click', () => {
+      const open = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      menuIcon.setAttribute('d', open ? 'M4 6h16M4 12h16M4 18h16' : 'M6 18L18 6M6 6l12 12');
     });
   </script>
-
+  <script>
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+    }
+  </script>
 </body>
 </html>

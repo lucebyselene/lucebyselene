@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Întrebări Frecvente și Îngrijire — Luce by Selene</title>
+  <meta name="description" content="Răspunsuri la cele mai frecvente întrebări despre lumânările Luce by Selene și sfaturi de îngrijire pentru a le bucura cât mai mult.">
+  <link rel="canonical" href="https://lucebyselene.ro/faq.html">
+  <meta property="og:title" content="Întrebări Frecvente — Luce by Selene">
+  <meta property="og:description" content="Răspunsuri la cele mai frecvente întrebări despre lumânările Luce by Selene și sfaturi de îngrijire.">
+  <meta property="og:image" content="https://lucebyselene.ro/og-image.jpg">
+  <meta property="og:url" content="https://lucebyselene.ro/faq.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ro_RO">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: '#F5F1EB',
+          'cream-dark': '#E8E2D9',
+          text: '#1C1612',
+          'text-light': '#6B5647',
+          accent: '#C9A84C',
+          'accent-hover': '#B8862E',
+          brown: '#6B3A2A',
+          sage: '#7A8B6F',
+          'sage-light': '#E8EDE5',
+          border: '#E5D9CE',
+        },
+        fontFamily: {
+          display: ['Cormorant Garamond', 'serif'],
+          body: ['DM Sans', 'sans-serif'],
+        },
+      },
+    },
+  }
+  </script>
+  <style type="text/tailwindcss">
+    @layer base {
+      body { font-family: 'DM Sans', sans-serif; font-size: 17px; line-height: 1.7; color: #1C1612; background-color: #F5F1EB; }
+      h1, h2, h3, h4, h5, h6 { font-family: 'Cormorant Garamond', serif; }
+    }
+    @layer utilities {
+      .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+      .reveal.visible { opacity: 1; transform: translateY(0); }
+      .nav-link::after { content: ''; display: block; width: 0; height: 2px; background: #C9A84C; transition: width 0.3s ease; }
+      .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+      @keyframes pulse-wa { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); } 70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); } 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); } }
+      .wa-pulse { animation: pulse-wa 2s infinite; }
+      details summary { cursor: pointer; list-style: none; }
+      details summary::-webkit-details-marker { display: none; }
+      details[open] summary .faq-arrow { transform: rotate(180deg); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .wa-pulse { animation: none; }
+    }
+  </style>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="REPLACE_ME"></script>
+</head>
+<body class="bg-cream text-text">
+
+  <!-- Navigation -->
+  <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-border z-50">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 sm:h-20">
+      <a href="/" class="font-display text-2xl sm:text-3xl font-bold">
+        <span class="text-accent">Luce</span> <span class="text-text">by Selene</span>
+      </a>
+      <ul class="hidden md:flex items-center gap-8 font-body text-[15px]">
+        <li><a href="/" class="nav-link py-1">Acasă</a></li>
+        <li><a href="/produse.html" class="nav-link py-1">Produse</a></li>
+        <li><a href="/povestea.html" class="nav-link py-1">Povestea</a></li>
+        <li><a href="/faq.html" class="nav-link active py-1">FAQ</a></li>
+        <li><a href="/contact.html" class="nav-link py-1">Contact</a></li>
+      </ul>
+      <button id="menuBtn" class="md:hidden p-3 -mr-3" aria-label="Meniu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path id="menuIcon" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </nav>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-border bg-white">
+      <ul class="flex flex-col py-4 px-6 gap-1 font-body">
+        <li><a href="/" class="block py-3 px-3 hover:bg-cream rounded-lg">Acasă</a></li>
+        <li><a href="/produse.html" class="block py-3 px-3 hover:bg-cream rounded-lg">Produse</a></li>
+        <li><a href="/povestea.html" class="block py-3 px-3 hover:bg-cream rounded-lg">Povestea</a></li>
+        <li><a href="/faq.html" class="block py-3 px-3 text-accent font-medium rounded-lg">FAQ</a></li>
+        <li><a href="/contact.html" class="block py-3 px-3 hover:bg-cream rounded-lg">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="pt-28 sm:pt-36 pb-16 sm:pb-20 text-center">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-bold mb-6 reveal">Întrebări frecvente</h1>
+      <p class="text-text-light text-lg max-w-2xl mx-auto reveal">Tot ce vrei să știi despre produsele noastre, procesul de comandă și cum să ai grijă de lumânări.</p>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="pb-20 sm:pb-28">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="space-y-4">
+
+        <details class="bg-white rounded-2xl border border-border overflow-hidden reveal">
+          <summary class="flex items-center justify-between p-6 font-display text-lg sm:text-xl font-semibold">
+            Ce tip de ceară folosiți?
+            <svg class="w-5 h-5 text-text-light flex-shrink-0 ml-4 faq-arrow transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-text-light">
+            <p>Folosim două tipuri de ceară: <strong class="text-text">ceară de albine</strong> de la apicultori din România și <strong class="text-text">ceară de soia</strong> naturală. Ambele sunt biodegradabile, ard curat (fără fum negru) și nu eliberează substanțe toxice. Nu folosim parafină în niciun produs.</p>
+          </div>
+        </details>
+
+        <details class="bg-white rounded-2xl border border-border overflow-hidden reveal">
+          <summary class="flex items-center justify-between p-6 font-display text-lg sm:text-xl font-semibold">
+            Lumânările sunt sigure pentru animale de companie?
+            <svg class="w-5 h-5 text-text-light flex-shrink-0 ml-4 faq-arrow transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-text-light">
+            <p>Lumânările noastre din ceară de albine fără parfum sunt cele mai sigure. Pentru cele cu uleiuri esențiale, depinde de tipul animalului. Unele uleiuri esențiale (cum ar fi cele de arbore de ceai sau eucalipt) pot fi iritante pentru pisici. Dacă ai animale de companie, scrie-ne și te sfătuim care parfumuri sunt potrivite pentru tine.</p>
+          </div>
+        </details>
+
+        <details class="bg-white rounded-2xl border border-border overflow-hidden reveal">
+          <summary class="flex items-center justify-between p-6 font-display text-lg sm:text-xl font-semibold">
+            Cât durează o lumânare?
+            <svg class="w-5 h-5 text-text-light flex-shrink-0 ml-4 faq-arrow transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-text-light">
+            <p>Depinde de dimensiune, dar ca regulă generală: o lumânare de 200g arde aproximativ 35-40 de ore, iar una de 100g arde circa 20-25 de ore. Ceara naturală arde mai lent decât parafina, deci durează mai mult decât echivalentul industrial.</p>
+          </div>
+        </details>
+
+        <details class="bg-white rounded-2xl border border-border overflow-hidden reveal">
+          <summary class="flex items-center justify-between p-6 font-display text-lg sm:text-xl font-semibold">
+            Cum comand?
+            <svg class="w-5 h-5 text-text-light flex-shrink-0 ml-4 faq-arrow transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-text-light">
+            <p>Cel mai simplu: ne scrii pe <a href="https://wa.me/40XXXXXXXXX?text=Bun%C4%83!%20Vreau%20s%C4%83%20comand%20de%20la%20Luce%20by%20Selene." class="text-accent hover:text-accent-hover underline">WhatsApp</a> sau pe <a href="https://www.instagram.com/lucebyselene" class="text-accent hover:text-accent-hover underline" target="_blank" rel="noopener">Instagram</a> cu ce dorești. Poți folosi și <a href="/contact.html" class="text-accent hover:text-accent-hover underline">formularul de contact</a>. Îți confirmăm disponibilitatea, stabilim detaliile și expedierea.</p>
+          </div>
+        </details>
+
+        <details class="bg-white rounded-2xl border border-border overflow-hidden reveal">
+          <summary class="flex items-center justify-between p-6 font-display text-lg sm:text-xl font-semibold">
+            Care sunt costurile de livrare?
+            <svg class="w-5 h-5 text-text-light flex-shrink-0 ml-4 faq-arrow transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-text-light">
+            <p>Livrăm prin curier în toată România. Costul de livrare depinde de greutatea coletului și de adresă — îți comunicăm suma exactă înainte de a confirma comanda. Pentru comenzi mai mari, oferim periodic livrare gratuită (te anunțăm pe Instagram când avem astfel de oferte).</p>
+          </div>
+        </details>
+
+        <details class="bg-white rounded-2xl border border-border overflow-hidden reveal">
+          <summary class="flex items-center justify-between p-6 font-display text-lg sm:text-xl font-semibold">
+            Pot personaliza o lumânare?
+            <svg class="w-5 h-5 text-text-light flex-shrink-0 ml-4 faq-arrow transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-text-light">
+            <p>Da! Putem adapta parfumul, dimensiunea, recipientul și chiar eticheta. Lumânările personalizate sunt perfecte pentru nunți, botezuri, cadouri corporate sau orice eveniment special. Scrie-ne ce ai în minte și discutăm detaliile.</p>
+          </div>
+        </details>
+
+        <details class="bg-white rounded-2xl border border-border overflow-hidden reveal">
+          <summary class="flex items-center justify-between p-6 font-display text-lg sm:text-xl font-semibold">
+            Ce fac dacă lumânarea ajunge deteriorată?
+            <svg class="w-5 h-5 text-text-light flex-shrink-0 ml-4 faq-arrow transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-text-light">
+            <p>Ne contactezi imediat cu o fotografie a produsului deteriorat. Ambalăm cu foarte multă grijă, dar transportul poate fi imprevizibil. Dacă produsul ajunge într-o stare care nu corespunde, îl înlocuim sau îți returnăm banii — fără discuții complicate.</p>
+          </div>
+        </details>
+
+        <details class="bg-white rounded-2xl border border-border overflow-hidden reveal">
+          <summary class="flex items-center justify-between p-6 font-display text-lg sm:text-xl font-semibold">
+            Ce sunt wax melts?
+            <svg class="w-5 h-5 text-text-light flex-shrink-0 ml-4 faq-arrow transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-text-light">
+            <p>Sunt bucățele mici de ceară parfumată pe care le pui într-un arzător special (cu lumânare mică sau electric). Ceara se topește încet și eliberează parfumul fără flacără deschisă. Sunt ideale dacă ai copii mici, animale de companie sau pur și simplu preferi să nu lași o lumânare aprinsă.</p>
+          </div>
+        </details>
+
+        <details class="bg-white rounded-2xl border border-border overflow-hidden reveal">
+          <summary class="flex items-center justify-between p-6 font-display text-lg sm:text-xl font-semibold">
+            Cum folosesc odorizantele de dulap?
+            <svg class="w-5 h-5 text-text-light flex-shrink-0 ml-4 faq-arrow transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-text-light">
+            <p>Le agăți pe umeraș, le pui între rafturi sau le așezi într-un sertar. Parfumul se eliberează treptat și ține câteva săptămâni. Când simți că aroma slăbește, poți răzui ușor suprafața cu unghia pentru a „reîmprospăta" stratul de ceară. Funcționează fără căldură, fără electricitate.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Candle Care Section -->
+  <section class="py-20 sm:py-28 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-16 reveal">
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Cum ai grijă de lumânarea ta</h2>
+        <p class="text-text-light max-w-xl mx-auto">Câteva sfaturi simple care fac lumânarea să dureze mai mult și să ardă mai frumos.</p>
+      </div>
+
+      <div class="space-y-10">
+        <div class="flex gap-6 reveal">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
+            <span class="font-display text-xl font-bold text-accent">1</span>
+          </div>
+          <div>
+            <h3 class="font-display text-xl sm:text-2xl font-semibold mb-2">Prima aprindere contează cel mai mult</h3>
+            <p class="text-text-light">La prima utilizare, lasă lumânarea să ardă până când toată suprafața de ceară se topește de la o margine la cealaltă. Asta durează de obicei 1-2 ore, în funcție de diametru. Dacă o stingi prea devreme, va forma un „tunel" și nu va mai arde uniform niciodată.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-6 reveal">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
+            <span class="font-display text-xl font-bold text-accent">2</span>
+          </div>
+          <div>
+            <h3 class="font-display text-xl sm:text-2xl font-semibold mb-2">Taie fitilul înainte de fiecare utilizare</h3>
+            <p class="text-text-light">Scurtează fitilul la aproximativ 5-6mm înainte de a aprinde lumânarea. Un fitil prea lung produce flacără mare, fum și poate cauza formarea de funingine pe recipient. Poți folosi un foarfece sau un tăietor de fitil special.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-6 reveal">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
+            <span class="font-display text-xl font-bold text-accent">3</span>
+          </div>
+          <div>
+            <h3 class="font-display text-xl sm:text-2xl font-semibold mb-2">Nu o lăsa aprinsă mai mult de 3-4 ore</h3>
+            <p class="text-text-light">Sesiunile lungi de ardere supraîncălzesc ceara și pot cauza decolorare sau miros neplăcut. Ideal: aprinde-o, bucură-te 2-3 ore, apoi las-o să se răcească complet înainte de a o reaprinde.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-6 reveal">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
+            <span class="font-display text-xl font-bold text-accent">4</span>
+          </div>
+          <div>
+            <h3 class="font-display text-xl sm:text-2xl font-semibold mb-2">Păstrare corectă</h3>
+            <p class="text-text-light">Ține lumânările la loc răcoros, departe de lumina directă a soarelui. Dacă nu o folosești o perioadă, pune-i capacul (dacă are) sau acoper-o pentru a proteja parfumul. Ceara naturală se poate decolora ușor în timp la lumină — e un semn că ingredientele sunt naturale, nu un defect.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 sm:py-28" style="background: linear-gradient(135deg, #6B3A2A 0%, #8B4E3A 100%);">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center reveal">
+      <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">Mai ai întrebări?</h2>
+      <p class="text-white/80 text-lg mb-10 max-w-xl mx-auto">
+        Nu am acoperit tot? Scrie-ne și răspundem cu drag la orice te interesează.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://wa.me/40XXXXXXXXX?text=Bun%C4%83!%20Am%20o%20%C3%AEntrebare%20despre%20produsele%20Luce%20by%20Selene." class="inline-flex items-center justify-center gap-3 bg-[#25D366] text-white font-medium px-8 py-4 rounded-full hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 text-lg">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Întreabă pe WhatsApp
+        </a>
+        <a href="/contact.html" class="inline-flex items-center justify-center gap-3 bg-white/20 text-white font-medium px-8 py-4 rounded-full hover:bg-white/30 hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 text-lg border border-white/30">
+          Trimite un mesaj
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-text py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+        <div>
+          <a href="/" class="font-display text-2xl font-bold"><span class="text-accent">Luce</span> <span class="text-white">by Selene</span></a>
+          <p class="text-white/60 mt-4 text-[15px]">Lumânări artizanale din ceară naturală, făcute cu drag în România. Fiecare piesă poartă căldura mâinilor care au creat-o.</p>
+        </div>
+        <div>
+          <h4 class="font-display text-lg font-semibold text-white mb-4">Navigare</h4>
+          <ul class="space-y-2 text-[15px]">
+            <li><a href="/" class="text-white/60 hover:text-accent transition-colors">Acasă</a></li>
+            <li><a href="/produse.html" class="text-white/60 hover:text-accent transition-colors">Produse</a></li>
+            <li><a href="/povestea.html" class="text-white/60 hover:text-accent transition-colors">Povestea noastră</a></li>
+            <li><a href="/faq.html" class="text-white/60 hover:text-accent transition-colors">Întrebări frecvente</a></li>
+            <li><a href="/contact.html" class="text-white/60 hover:text-accent transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display text-lg font-semibold text-white mb-4">Contact</h4>
+          <ul class="space-y-2 text-[15px]">
+            <li><a href="mailto:contact@lucebyselene.ro" class="text-white/60 hover:text-accent transition-colors">contact@lucebyselene.ro</a></li>
+            <li><a href="https://wa.me/40XXXXXXXXX" class="text-white/60 hover:text-accent transition-colors">WhatsApp</a></li>
+          </ul>
+          <div class="flex items-center gap-4 mt-6">
+            <a href="https://www.instagram.com/lucebyselene" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors" aria-label="Instagram">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/LuceBySelene" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors" aria-label="Facebook">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://wa.me/40XXXXXXXXX?text=Bun%C4%83!%20Vreau%20s%C4%83%20comand%20de%20la%20Luce%20by%20Selene." target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors" aria-label="WhatsApp">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/10 mt-12 pt-8 text-center">
+        <p class="text-white/40 text-sm">&copy; 2026 Luce by Selene. Toate drepturile rezervate.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/40XXXXXXXXX?text=Bun%C4%83!%20Vreau%20s%C4%83%20comand%20de%20la%20Luce%20by%20Selene." target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-[9999] w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 wa-pulse" aria-label="WhatsApp">
+    <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    menuBtn.addEventListener('click', () => {
+      const open = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      menuIcon.setAttribute('d', open ? 'M4 6h16M4 12h16M4 18h16' : 'M6 18L18 6M6 6l12 12');
+    });
+  </script>
+  <script>
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+    }
+  </script>
+</body>
+</html>

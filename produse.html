@@ -3,67 +3,200 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Produse Luce by Selene — lumânări naturale, wax melts, odorizante de dulap, aranjamente florale, statuete din ghips.">
   <title>Produse — Luce by Selene</title>
+  <meta name="description" content="Lumânări din ceară de albine și soia, wax melts, odorizante de dulap, aranjamente florale, statuete din ghips și decorațiuni handmade.">
+  <link rel="canonical" href="https://lucebyselene.ro/produse.html">
+  <meta property="og:title" content="Produse — Luce by Selene">
+  <meta property="og:description" content="Lumânări din ceară de albine și soia, wax melts, odorizante de dulap, aranjamente florale, statuete din ghips și decorațiuni handmade.">
+  <meta property="og:image" content="https://lucebyselene.ro/og-image.jpg">
+  <meta property="og:url" content="https://lucebyselene.ro/produse.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ro_RO">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/produse.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: '#F5F1EB',
+          'cream-dark': '#E8E2D9',
+          text: '#1C1612',
+          'text-light': '#6B5647',
+          accent: '#C9A84C',
+          'accent-hover': '#B8862E',
+          brown: '#6B3A2A',
+          sage: '#7A8B6F',
+          'sage-light': '#E8EDE5',
+          border: '#E5D9CE',
+        },
+        fontFamily: {
+          display: ['Cormorant Garamond', 'serif'],
+          body: ['DM Sans', 'sans-serif'],
+        },
+      },
+    },
+  }
+  </script>
+  <style type="text/tailwindcss">
+    @layer base {
+      body { font-family: 'DM Sans', sans-serif; font-size: 17px; line-height: 1.7; color: #1C1612; background-color: #F5F1EB; }
+      h1, h2, h3, h4, h5, h6 { font-family: 'Cormorant Garamond', serif; }
+    }
+    @layer utilities {
+      .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+      .reveal.visible { opacity: 1; transform: translateY(0); }
+      .nav-link::after { content: ''; display: block; width: 0; height: 2px; background: #C9A84C; transition: width 0.3s ease; }
+      .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+      @keyframes pulse-wa { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); } 70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); } 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); } }
+      .wa-pulse { animation: pulse-wa 2s infinite; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .wa-pulse { animation: none; }
+    }
+  </style>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="REPLACE_ME"></script>
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Lumânări din ceară naturală",
+      "description": "Lumânări artizanale din ceară de albine și soia cu uleiuri esențiale.",
+      "brand": { "@type": "Brand", "name": "Luce by Selene" },
+      "url": "https://lucebyselene.ro/produse.html#lumanari"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Wax Melts",
+      "description": "Tăblițe parfumate din ceară naturală de soia pentru arzătoare.",
+      "brand": { "@type": "Brand", "name": "Luce by Selene" },
+      "url": "https://lucebyselene.ro/produse.html#waxmelts"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Odorizante de dulap",
+      "description": "Odorizante naturale din ceară parfumată pentru garderobă.",
+      "brand": { "@type": "Brand", "name": "Luce by Selene" },
+      "url": "https://lucebyselene.ro/produse.html#odorizante"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Aranjamente florale cu lumânări",
+      "description": "Compoziții decorative cu lumânări și flori naturale uscate.",
+      "brand": { "@type": "Brand", "name": "Luce by Selene" },
+      "url": "https://lucebyselene.ro/produse.html#aranjamente"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Statuete din ghips",
+      "description": "Figurine decorative turnate și pictate manual din ghips.",
+      "brand": { "@type": "Brand", "name": "Luce by Selene" },
+      "url": "https://lucebyselene.ro/produse.html#statuete"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Decorațiuni handmade",
+      "description": "Piese decorative unice create manual din materiale naturale.",
+      "brand": { "@type": "Brand", "name": "Luce by Selene" },
+      "url": "https://lucebyselene.ro/produse.html#decoratiuni"
+    }
+  ]
+  </script>
 </head>
-<body>
+<body class="bg-cream text-text">
 
-  <!-- Header -->
-  <header class="site-header">
-    <nav class="nav-wrapper">
-      <a href="index.html" class="logo">Luce <span>by Selene</span></a>
-      <button class="nav-toggle" aria-label="Meniu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links">
-        <li><a href="index.html">Acasă</a></li>
-        <li><a href="produse.html" class="active">Produse</a></li>
-        <li><a href="povestea.html">Povestea</a></li>
-        <li><a href="contact.html">Contact</a></li>
+  <!-- Navigation -->
+  <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-border z-50">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 sm:h-20">
+      <a href="/" class="font-display text-2xl sm:text-3xl font-bold">
+        <span class="text-accent">Luce</span> <span class="text-text">by Selene</span>
+      </a>
+      <ul class="hidden md:flex items-center gap-8 font-body text-[15px]">
+        <li><a href="/" class="nav-link py-1">Acasă</a></li>
+        <li><a href="/produse.html" class="nav-link active py-1">Produse</a></li>
+        <li><a href="/povestea.html" class="nav-link py-1">Povestea</a></li>
+        <li><a href="/faq.html" class="nav-link py-1">FAQ</a></li>
+        <li><a href="/contact.html" class="nav-link py-1">Contact</a></li>
       </ul>
+      <button id="menuBtn" class="md:hidden p-3 -mr-3" aria-label="Meniu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path id="menuIcon" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
     </nav>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-border bg-white">
+      <ul class="flex flex-col py-4 px-6 gap-1 font-body">
+        <li><a href="/" class="block py-3 px-3 hover:bg-cream rounded-lg">Acasă</a></li>
+        <li><a href="/produse.html" class="block py-3 px-3 text-accent font-medium rounded-lg">Produse</a></li>
+        <li><a href="/povestea.html" class="block py-3 px-3 hover:bg-cream rounded-lg">Povestea</a></li>
+        <li><a href="/faq.html" class="block py-3 px-3 hover:bg-cream rounded-lg">FAQ</a></li>
+        <li><a href="/contact.html" class="block py-3 px-3 hover:bg-cream rounded-lg">Contact</a></li>
+      </ul>
+    </div>
   </header>
 
   <!-- Page Header -->
-  <section class="page-header">
-    <div class="container">
-      <h1>Produsele noastre</h1>
-      <p>Totul e creat manual, din ingrediente naturale. Fiecare piesă e unică.</p>
+  <section class="pt-28 sm:pt-36 pb-16 sm:pb-20 text-center">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-bold mb-6 reveal">Produsele noastre</h1>
+      <p class="text-text-light text-lg max-w-2xl mx-auto reveal">Toate produsele sunt făcute manual, din ingrediente naturale, în atelierul nostru din România. Alege ce îți place și comandă direct pe WhatsApp.</p>
     </div>
   </section>
 
   <!-- Lumânări -->
-  <section id="lumanari" class="product-section">
-    <div class="container">
-      <div class="section-title">
-        <h2>Lumânări naturale</h2>
-        <p>Două tipuri de ceară, un singur standard: natural și curat.</p>
+  <section id="lumanari" class="py-16 sm:py-20 scroll-mt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-12 reveal">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold mb-3">Lumânări</h2>
+        <p class="text-text-light max-w-2xl">Din ceară de albine de la apicultori locali și ceară de soia, parfumate cu uleiuri esențiale. Fiecare lumânare e turnată manual și lăsată să se solidifice în ritmul ei.</p>
       </div>
-      <div class="product-grid">
-        <div class="product-card">
-          <div class="product-image placeholder">Foto în curând</div>
-          <div class="product-info">
-            <h3>Ceară de albine 100%</h3>
-            <p>Lumânări pure din ceară de albine, cu aroma naturală de miere. Fără aditivi, fără parfumuri sintetice.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div class="bg-white rounded-2xl border border-border overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300 reveal">
+          <div class="aspect-square bg-gradient-to-br from-[#E8E2D9] to-[#D4C4B0] flex items-center justify-center">
+            <span class="text-accent/40 font-display text-lg">Foto produs</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-semibold mb-2">Lumânare din ceară de albine</h3>
+            <p class="text-text-light text-[15px] mb-4">100% ceară de albine, fără aditivi. Aromă naturală de miere și polen, ardere lentă și curată.</p>
+            <a href="https://wa.me/40XXXXXXXXX?text=Bun%C4%83!%20Vreau%20s%C4%83%20comand%20o%20lum%C3%A2nare%20din%20cear%C4%83%20de%20albine." class="inline-flex items-center gap-2 bg-accent text-white font-medium px-6 py-3 rounded-full hover:bg-accent-hover hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 text-[15px] w-full sm:w-auto justify-center">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Comandă pe WhatsApp
+            </a>
           </div>
         </div>
-        <div class="product-card">
-          <div class="product-image placeholder">Foto în curând</div>
-          <div class="product-info">
-            <h3>Ceară de soia cu uleiuri esențiale</h3>
-            <p>Ceară de soia combinată cu uleiuri esențiale pure. Parfum natural, ardere curată.</p>
+        <div class="bg-white rounded-2xl border border-border overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300 reveal">
+          <div class="aspect-square bg-gradient-to-br from-[#E8EDE5] to-[#D4DDCD] flex items-center justify-center">
+            <span class="text-sage/40 font-display text-lg">Foto produs</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-semibold mb-2">Lumânare din soia cu lavandă</h3>
+            <p class="text-text-light text-[15px] mb-4">Ceară de soia cu ulei esențial de lavandă. Relaxantă, perfectă pentru serile liniștite acasă.</p>
+            <a href="https://wa.me/40XXXXXXXXX?text=Bun%C4%83!%20Vreau%20s%C4%83%20comand%20o%20lum%C3%A2nare%20din%20soia%20cu%20lavand%C4%83." class="inline-flex items-center gap-2 bg-accent text-white font-medium px-6 py-3 rounded-full hover:bg-accent-hover hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 text-[15px] w-full sm:w-auto justify-center">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Comandă pe WhatsApp
+            </a>
           </div>
         </div>
-        <div class="product-card">
-          <div class="product-image placeholder">Foto în curând</div>
-          <div class="product-info">
-            <h3>Lumânări colorate (90% non-toxice)</h3>
-            <p>Cu un singur adaos: colorant alimentar. Restul e aceeași ceară naturală.</p>
+        <div class="bg-white rounded-2xl border border-border overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300 reveal">
+          <div class="aspect-square bg-gradient-to-br from-[#F0E8E0] to-[#E5D9CE] flex items-center justify-center">
+            <span class="text-brown/30 font-display text-lg">Foto produs</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-semibold mb-2">Lumânare din soia cu scorțișoară</h3>
+            <p class="text-text-light text-[15px] mb-4">Ceară de soia cu uleiuri esențiale de scorțișoară și portocală. Călduroasă, ideală pentru sezonul rece.</p>
+            <a href="https://wa.me/40XXXXXXXXX?text=Bun%C4%83!%20Vreau%20s%C4%83%20comand%20o%20lum%C3%A2nare%20din%20soia%20cu%20scor%C8%9Bi%C8%99oar%C4%83." class="inline-flex items-center gap-2 bg-accent text-white font-medium px-6 py-3 rounded-full hover:bg-accent-hover hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 text-[15px] w-full sm:w-auto justify-center">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Comandă pe WhatsApp
+            </a>
           </div>
         </div>
       </div>
@@ -71,18 +204,50 @@
   </section>
 
   <!-- Wax Melts -->
-  <section id="waxmelts" class="product-section alt-bg">
-    <div class="container">
-      <div class="section-title">
-        <h2>Wax melts</h2>
-        <p>Parfum natural fără flacără. Se topesc în suportul de aromaterapie.</p>
+  <section id="waxmelts" class="py-16 sm:py-20 bg-white scroll-mt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-12 reveal">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold mb-3">Wax Melts</h2>
+        <p class="text-text-light max-w-2xl">Tăblițe de ceară parfumată care se topesc într-un arzător. Aromă intensă fără flacără deschisă — sigure și cu efect de lungă durată.</p>
       </div>
-      <div class="product-grid">
-        <div class="product-card">
-          <div class="product-image placeholder">Foto în curând</div>
-          <div class="product-info">
-            <h3>Wax melts din ceară naturală</h3>
-            <p>Bucăți de ceară parfumată cu uleiuri esențiale. Le topești și casa se umple de parfum.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div class="bg-cream rounded-2xl border border-border overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300 reveal">
+          <div class="aspect-square bg-gradient-to-br from-[#E8EDE5] to-[#D4DDCD] flex items-center justify-center">
+            <span class="text-sage/40 font-display text-lg">Foto produs</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-semibold mb-2">Wax Melt — Lavandă și Eucalipt</h3>
+            <p class="text-text-light text-[15px] mb-4">O combinație răcoritoare care curăță aerul și liniștește mintea. Parfum natural, fără chimicale.</p>
+            <a href="https://wa.me/40XXXXXXXXX?text=Bun%C4%83!%20Vreau%20s%C4%83%20comand%20wax%20melt%20lavand%C4%83%20%C8%99i%20eucalipt." class="inline-flex items-center gap-2 bg-accent text-white font-medium px-6 py-3 rounded-full hover:bg-accent-hover hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 text-[15px] w-full sm:w-auto justify-center">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Comandă pe WhatsApp
+            </a>
+          </div>
+        </div>
+        <div class="bg-cream rounded-2xl border border-border overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300 reveal">
+          <div class="aspect-square bg-gradient-to-br from-[#F0E8E0] to-[#E5D9CE] flex items-center justify-center">
+            <span class="text-accent/40 font-display text-lg">Foto produs</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-semibold mb-2">Wax Melt — Portocală și Scorțișoară</h3>
+            <p class="text-text-light text-[15px] mb-4">Aromă călduroasă, perfectă pentru sezonul rece. Umple casa cu mirosul prăjiturilor de la bunica.</p>
+            <a href="https://wa.me/40XXXXXXXXX?text=Bun%C4%83!%20Vreau%20s%C4%83%20comand%20wax%20melt%20portocal%C4%83%20%C8%99i%20scor%C8%9Bi%C8%99oar%C4%83." class="inline-flex items-center gap-2 bg-accent text-white font-medium px-6 py-3 rounded-full hover:bg-accent-hover hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 text-[15px] w-full sm:w-auto justify-center">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Comandă pe WhatsApp
+            </a>
+          </div>
+        </div>
+        <div class="bg-cream rounded-2xl border border-border overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300 reveal">
+          <div class="aspect-square bg-gradient-to-br from-[#E8E2D9] to-[#D4C4B0] flex items-center justify-center">
+            <span class="text-brown/30 font-display text-lg">Foto produs</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-semibold mb-2">Wax Melt — Vanilie</h3>
+            <p class="text-text-light text-[15px] mb-4">Dulce și învăluitor, parfumul de vanilie naturală creează o atmosferă de confort și siguranță.</p>
+            <a href="https://wa.me/40XXXXXXXXX?text=Bun%C4%83!%20Vreau%20s%C4%83%20comand%20wax%20melt%20vanilie." class="inline-flex items-center gap-2 bg-accent text-white font-medium px-6 py-3 rounded-full hover:bg-accent-hover hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 text-[15px] w-full sm:w-auto justify-center">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Comandă pe WhatsApp
+            </a>
           </div>
         </div>
       </div>
@@ -90,56 +255,113 @@
   </section>
 
   <!-- Odorizante dulap -->
-  <section id="odorizante" class="product-section">
-    <div class="container">
-      <div class="section-title">
-        <h2>Odorizante de dulap</h2>
-        <p>Haine proaspete, natural. Din ceară parfumată, fără chimicale.</p>
+  <section id="odorizante" class="py-16 sm:py-20 scroll-mt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-12 reveal">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold mb-3">Odorizante de dulap</h2>
+        <p class="text-text-light max-w-2xl">Tăblițe de ceară parfumată care îți păstrează hainele proaspete și parfumate săptămâni întregi. Fără chimicale, fără substanțe sintetice.</p>
       </div>
-      <div class="product-grid">
-        <div class="product-card">
-          <div class="product-image placeholder">Foto în curând</div>
-          <div class="product-info">
-            <h3>Pastile de ceară pentru dulap</h3>
-            <p>Se pun între haine sau în sertare. Parfumează natural săptămâni întregi.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div class="bg-white rounded-2xl border border-border overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300 reveal">
+          <div class="aspect-square bg-gradient-to-br from-[#E8EDE5] to-[#D4DDCD] flex items-center justify-center">
+            <span class="text-sage/40 font-display text-lg">Foto produs</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-semibold mb-2">Odorizant — Flori de câmp</h3>
+            <p class="text-text-light text-[15px] mb-4">Aromă proaspătă de flori sălbatice. Se agață ușor pe umeraș sau se pune între haine.</p>
+            <a href="https://wa.me/40XXXXXXXXX?text=Bun%C4%83!%20Vreau%20s%C4%83%20comand%20odorizant%20de%20dulap%20flori%20de%20c%C3%A2mp." class="inline-flex items-center gap-2 bg-accent text-white font-medium px-6 py-3 rounded-full hover:bg-accent-hover hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 text-[15px] w-full sm:w-auto justify-center">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Comandă pe WhatsApp
+            </a>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl border border-border overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300 reveal">
+          <div class="aspect-square bg-gradient-to-br from-[#E8E2D9] to-[#D4C4B0] flex items-center justify-center">
+            <span class="text-accent/40 font-display text-lg">Foto produs</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-semibold mb-2">Odorizant — Lavandă</h3>
+            <p class="text-text-light text-[15px] mb-4">Clasic și eficient. Lavanda naturală îndepărtează moliile și lasă un parfum delicat pe haine.</p>
+            <a href="https://wa.me/40XXXXXXXXX?text=Bun%C4%83!%20Vreau%20s%C4%83%20comand%20odorizant%20de%20dulap%20lavand%C4%83." class="inline-flex items-center gap-2 bg-accent text-white font-medium px-6 py-3 rounded-full hover:bg-accent-hover hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 text-[15px] w-full sm:w-auto justify-center">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Comandă pe WhatsApp
+            </a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Aranjamente -->
-  <section id="aranjamente" class="product-section alt-bg">
-    <div class="container">
-      <div class="section-title">
-        <h2>Aranjamente florale</h2>
-        <p>Lumânări și flori într-o compoziție decorativă. Cadoul care impresionează.</p>
+  <!-- Aranjamente florale -->
+  <section id="aranjamente" class="py-16 sm:py-20 bg-white scroll-mt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-12 reveal">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold mb-3">Aranjamente florale</h2>
+        <p class="text-text-light max-w-2xl">Compoziții decorative care îmbină lumânări cu flori uscate și elemente naturale. Perfecte ca și cadou sau ca piese de decor pentru acasă.</p>
       </div>
-      <div class="product-grid">
-        <div class="product-card">
-          <div class="product-image placeholder">Foto în curând</div>
-          <div class="product-info">
-            <h3>Aranjamente din lumânări handmade</h3>
-            <p>Compoziții unice din lumânări turnate manual și elemente florale decorative.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div class="bg-cream rounded-2xl border border-border overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300 reveal">
+          <div class="aspect-square bg-gradient-to-br from-[#F0E8E0] to-[#E5D9CE] flex items-center justify-center">
+            <span class="text-accent/40 font-display text-lg">Foto produs</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-semibold mb-2">Aranjament cu trandafiri uscați</h3>
+            <p class="text-text-light text-[15px] mb-4">Lumânare de soia înconjurată de trandafiri uscați și lavandă. Un cadou care vorbește de la sine.</p>
+            <a href="https://wa.me/40XXXXXXXXX?text=Bun%C4%83!%20Vreau%20s%C4%83%20comand%20un%20aranjament%20floral%20cu%20trandafiri." class="inline-flex items-center gap-2 bg-accent text-white font-medium px-6 py-3 rounded-full hover:bg-accent-hover hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 text-[15px] w-full sm:w-auto justify-center">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Comandă pe WhatsApp
+            </a>
+          </div>
+        </div>
+        <div class="bg-cream rounded-2xl border border-border overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300 reveal">
+          <div class="aspect-square bg-gradient-to-br from-[#E8EDE5] to-[#D4DDCD] flex items-center justify-center">
+            <span class="text-sage/40 font-display text-lg">Foto produs</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-semibold mb-2">Aranjament de masă rustic</h3>
+            <p class="text-text-light text-[15px] mb-4">Trei lumânări pe un platou de lemn cu mușchi, conuri de brad și scorțișoară. Ideal pentru centru de masă.</p>
+            <a href="https://wa.me/40XXXXXXXXX?text=Bun%C4%83!%20Vreau%20s%C4%83%20comand%20un%20aranjament%20rustic%20de%20mas%C4%83." class="inline-flex items-center gap-2 bg-accent text-white font-medium px-6 py-3 rounded-full hover:bg-accent-hover hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 text-[15px] w-full sm:w-auto justify-center">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Comandă pe WhatsApp
+            </a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Statuete -->
-  <section id="statuete" class="product-section">
-    <div class="container">
-      <div class="section-title">
-        <h2>Statuete din ghips</h2>
-        <p>Piese decorative turnate și finisate manual. Fiecare e un unicat.</p>
+  <!-- Statuete ghips -->
+  <section id="statuete" class="py-16 sm:py-20 scroll-mt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-12 reveal">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold mb-3">Statuete din ghips</h2>
+        <p class="text-text-light max-w-2xl">Figurine decorative turnate în ghips și pictate manual. Fiecare piesă e ușor diferită — asta le face speciale.</p>
       </div>
-      <div class="product-grid">
-        <div class="product-card">
-          <div class="product-image placeholder">Foto în curând</div>
-          <div class="product-info">
-            <h3>Statuete decorative</h3>
-            <p>Figurine din ghips, turnate în forme proprii și finisate cu atenție la detalii.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div class="bg-white rounded-2xl border border-border overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300 reveal">
+          <div class="aspect-square bg-gradient-to-br from-[#E8E2D9] to-[#DDD5CA] flex items-center justify-center">
+            <span class="text-text-light/30 font-display text-lg">Foto produs</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-semibold mb-2">Statuetă decorativă — Înger</h3>
+            <p class="text-text-light text-[15px] mb-4">Figurină din ghips vopsită manual cu acuarele. O piesă delicată, perfectă pentru raft sau noptieră.</p>
+            <a href="https://wa.me/40XXXXXXXXX?text=Bun%C4%83!%20Vreau%20s%C4%83%20comand%20o%20statuet%C4%83%20%C3%AEnger." class="inline-flex items-center gap-2 bg-accent text-white font-medium px-6 py-3 rounded-full hover:bg-accent-hover hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 text-[15px] w-full sm:w-auto justify-center">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Comandă pe WhatsApp
+            </a>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl border border-border overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300 reveal">
+          <div class="aspect-square bg-gradient-to-br from-[#F0E8E0] to-[#E5D9CE] flex items-center justify-center">
+            <span class="text-brown/30 font-display text-lg">Foto produs</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-semibold mb-2">Statuetă decorativă — Bust</h3>
+            <p class="text-text-light text-[15px] mb-4">Bust minimalist din ghips alb, finisat manual. Arată la fel de bine pe o etajeră ca și pe birou.</p>
+            <a href="https://wa.me/40XXXXXXXXX?text=Bun%C4%83!%20Vreau%20s%C4%83%20comand%20o%20statuet%C4%83%20bust." class="inline-flex items-center gap-2 bg-accent text-white font-medium px-6 py-3 rounded-full hover:bg-accent-hover hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 text-[15px] w-full sm:w-auto justify-center">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Comandă pe WhatsApp
+            </a>
           </div>
         </div>
       </div>
@@ -147,18 +369,37 @@
   </section>
 
   <!-- Decorațiuni -->
-  <section id="decoratiuni" class="product-section alt-bg">
-    <div class="container">
-      <div class="section-title">
-        <h2>Decorațiuni handmade</h2>
-        <p>Piese mici care fac diferențe mari în atmosfera casei.</p>
+  <section id="decoratiuni" class="py-16 sm:py-20 bg-white scroll-mt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-12 reveal">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold mb-3">Decorațiuni handmade</h2>
+        <p class="text-text-light max-w-2xl">Piese decorative unice, create din materiale naturale. De la suporturi de lumânări la cadouri personalizate — fiecare e gândită să aducă căldură în casă.</p>
       </div>
-      <div class="product-grid">
-        <div class="product-card">
-          <div class="product-image placeholder">Foto în curând</div>
-          <div class="product-info">
-            <h3>Decorațiuni din ceară și ghips</h3>
-            <p>Obiecte decorative create manual, perfecte pentru orice colț care are nevoie de căldură.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div class="bg-cream rounded-2xl border border-border overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300 reveal">
+          <div class="aspect-square bg-gradient-to-br from-[#E8E2D9] to-[#D4C4B0] flex items-center justify-center">
+            <span class="text-accent/40 font-display text-lg">Foto produs</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-semibold mb-2">Suport lumânare din lemn</h3>
+            <p class="text-text-light text-[15px] mb-4">Suport rustic din lemn natural, finisat și tratat manual. Se potrivește cu orice lumânare din colecție.</p>
+            <a href="https://wa.me/40XXXXXXXXX?text=Bun%C4%83!%20Vreau%20s%C4%83%20comand%20un%20suport%20de%20lum%C3%A2nare%20din%20lemn." class="inline-flex items-center gap-2 bg-accent text-white font-medium px-6 py-3 rounded-full hover:bg-accent-hover hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 text-[15px] w-full sm:w-auto justify-center">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Comandă pe WhatsApp
+            </a>
+          </div>
+        </div>
+        <div class="bg-cream rounded-2xl border border-border overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300 reveal">
+          <div class="aspect-square bg-gradient-to-br from-[#E8EDE5] to-[#DDE5D8] flex items-center justify-center">
+            <span class="text-sage/40 font-display text-lg">Foto produs</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-semibold mb-2">Set cadou personalizat</h3>
+            <p class="text-text-light text-[15px] mb-4">Combină produsele preferate într-un set cadou cu ambalaj frumos. Spune-ne cui e destinat și noi ne ocupăm de rest.</p>
+            <a href="https://wa.me/40XXXXXXXXX?text=Bun%C4%83!%20Vreau%20s%C4%83%20comand%20un%20set%20cadou%20personalizat." class="inline-flex items-center gap-2 bg-accent text-white font-medium px-6 py-3 rounded-full hover:bg-accent-hover hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 text-[15px] w-full sm:w-auto justify-center">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Comandă pe WhatsApp
+            </a>
           </div>
         </div>
       </div>
@@ -166,51 +407,86 @@
   </section>
 
   <!-- CTA -->
-  <section class="cta-section">
-    <div class="container" style="text-align: center;">
-      <h2>Vrei să comanzi?</h2>
-      <p style="color: var(--text-light); max-width: 500px; margin: 12px auto 32px;">Scrie-ne pe Instagram, WhatsApp sau prin formularul de contact. Fiecare comandă e pregătită special pentru tine.</p>
-      <a href="contact.html" class="btn">Contactează-ne</a>
+  <section class="py-20 sm:py-28" style="background: linear-gradient(135deg, #6B3A2A 0%, #8B4E3A 100%);">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center reveal">
+      <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">Nu ai găsit ce căutai?</h2>
+      <p class="text-white/80 text-lg mb-10 max-w-xl mx-auto">
+        Facem și produse personalizate. Scrie-ne ce ai în minte și vedem ce putem crea pentru tine.
+      </p>
+      <a href="https://wa.me/40XXXXXXXXX?text=Bun%C4%83!%20Vreau%20s%C4%83%20discut%20despre%20un%20produs%20personalizat." class="inline-flex items-center justify-center gap-3 bg-[#25D366] text-white font-medium px-8 py-4 rounded-full hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 text-lg">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Discutăm pe WhatsApp
+      </a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="logo">Luce <span>by Selene</span></div>
-          <p>Lumânări naturale handmade, create cu grijă în România.</p>
+  <footer class="bg-text py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+        <div>
+          <a href="/" class="font-display text-2xl font-bold"><span class="text-accent">Luce</span> <span class="text-white">by Selene</span></a>
+          <p class="text-white/60 mt-4 text-[15px]">Lumânări artizanale din ceară naturală, făcute cu drag în România. Fiecare piesă poartă căldura mâinilor care au creat-o.</p>
         </div>
         <div>
-          <h4>Navigare</h4>
-          <ul class="footer-links">
-            <li><a href="index.html">Acasă</a></li>
-            <li><a href="produse.html">Produse</a></li>
-            <li><a href="povestea.html">Povestea</a></li>
-            <li><a href="contact.html">Contact</a></li>
+          <h4 class="font-display text-lg font-semibold text-white mb-4">Navigare</h4>
+          <ul class="space-y-2 text-[15px]">
+            <li><a href="/" class="text-white/60 hover:text-accent transition-colors">Acasă</a></li>
+            <li><a href="/produse.html" class="text-white/60 hover:text-accent transition-colors">Produse</a></li>
+            <li><a href="/povestea.html" class="text-white/60 hover:text-accent transition-colors">Povestea noastră</a></li>
+            <li><a href="/faq.html" class="text-white/60 hover:text-accent transition-colors">Întrebări frecvente</a></li>
+            <li><a href="/contact.html" class="text-white/60 hover:text-accent transition-colors">Contact</a></li>
           </ul>
         </div>
         <div>
-          <h4>Contact</h4>
-          <ul class="footer-links">
-            <li><a href="mailto:contact@lucebyselene.ro">contact@lucebyselene.ro</a></li>
-            <li><a href="https://instagram.com/lucebyselene" target="_blank" rel="noopener">Instagram</a></li>
-            <li><a href="https://facebook.com/lucebyselene" target="_blank" rel="noopener">Facebook</a></li>
+          <h4 class="font-display text-lg font-semibold text-white mb-4">Contact</h4>
+          <ul class="space-y-2 text-[15px]">
+            <li><a href="mailto:contact@lucebyselene.ro" class="text-white/60 hover:text-accent transition-colors">contact@lucebyselene.ro</a></li>
+            <li><a href="https://wa.me/40XXXXXXXXX" class="text-white/60 hover:text-accent transition-colors">WhatsApp</a></li>
           </ul>
+          <div class="flex items-center gap-4 mt-6">
+            <a href="https://www.instagram.com/lucebyselene" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors" aria-label="Instagram">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/LuceBySelene" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors" aria-label="Facebook">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://wa.me/40XXXXXXXXX?text=Bun%C4%83!%20Vreau%20s%C4%83%20comand%20de%20la%20Luce%20by%20Selene." target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors" aria-label="WhatsApp">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        &copy; 2026 Luce by Selene. Toate drepturile rezervate.
+      <div class="border-t border-white/10 mt-12 pt-8 text-center">
+        <p class="text-white/40 text-sm">&copy; 2026 Luce by Selene. Toate drepturile rezervate.</p>
       </div>
     </div>
   </footer>
 
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/40XXXXXXXXX?text=Bun%C4%83!%20Vreau%20s%C4%83%20comand%20de%20la%20Luce%20by%20Selene." target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-[9999] w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 wa-pulse" aria-label="WhatsApp">
+    <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
   <script>
-    document.querySelector('.nav-toggle').addEventListener('click', function() {
-      document.querySelector('.nav-links').classList.toggle('open');
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    menuBtn.addEventListener('click', () => {
+      const open = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      menuIcon.setAttribute('d', open ? 'M4 6h16M4 12h16M4 18h16' : 'M6 18L18 6M6 6l12 12');
     });
   </script>
-
+  <script>
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+    }
+  </script>
 </body>
 </html>
